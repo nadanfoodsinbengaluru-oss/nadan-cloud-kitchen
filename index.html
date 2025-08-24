@@ -3,177 +3,213 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nadan Cloud Kitchen - Homely Pothichor</title>
+  <title>Nadan Cloud Kitchen - Authentic Kerala Pothichor Delights</title>
   <style>
-    /* Kerala and Bangalore cultural influence colors and typography */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto+Slab&display=swap');
+
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #fff8f0;
-      color: #3a2f0f;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fceabb, #f8b500);
+      color: #4b342f;
       margin: 0;
       padding: 0;
     }
+
     header {
-      background: #f7b733;
-      color: #5a381e;
-      padding: 1rem 2rem;
+      background: #00695c;
+      color: #fff8e1;
+      padding: 1.6rem 2rem;
       text-align: center;
-      border-bottom: 4px solid #159957; /* Green from Kerala banana leaf */
-      font-weight: bold;
-      font-size: 1.8rem;
+      font-family: 'Roboto Slab', serif;
+      font-size: 2rem;
+      letter-spacing: 1.2px;
+      box-shadow: 0 4px 8px rgba(1, 1, 1, 0.15);
+      position: relative;
     }
+
+    header img {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      max-height: 40px;
+      opacity: 0.3;
+    }
+
+    header img#kerala {
+      left: 1rem;
+    }
+
+    header img#bangalore {
+      right: 1rem;
+    }
+
     main {
       max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+      margin: 2.5rem auto;
+      padding: 0 1.5rem;
+      background: #fff3e0;
+      border-radius: 16px;
+      box-shadow: 0 6px 12px rgba(1, 1, 1, 0.1);
     }
+
     h2 {
-      color: #5a381e;
-      border-bottom: 2px solid #159957;
-      padding-bottom: 0.3rem;
+      font-family: 'Roboto Slab', serif;
+      font-weight: 700;
+      color: #bf360c;
       margin-bottom: 1rem;
+      border-bottom: 3px solid #ff6f00;
+      padding-bottom: 0.3rem;
     }
+
     .card {
-      background: #fff;
-      box-shadow: 0 0 12px rgba(0,0,0,0.1);
-      border-radius: 10px;
-      padding: 1rem 2rem;
+      background: #fff8e1;
+      border-radius: 12px;
+      padding: 1.8rem 2.2rem;
       margin-bottom: 2rem;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+      line-height: 1.6;
+      font-size: 1.13rem;
+      position: relative;
     }
+
     .menu-item {
       display: flex;
       justify-content: space-between;
-      padding: 0.5rem 0;
-      border-bottom: 1px solid #ddd;
-      font-size: 1.1rem;
+      padding: 0.65rem 0;
+      border-bottom: 1px solid #fdd835;
+      font-weight: 600;
+      color: #4e342e;
     }
+
     .menu-item:last-child {
       border-bottom: none;
     }
+
     .delivery-info p {
-      margin: 0.5rem 0;
-      font-size: 1.1rem;
+      margin: 0.6rem 0;
+      font-weight: 500;
+      color: #5d4037;
     }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    label {
-      font-weight: 600;
-    }
-    input, select, button {
-      padding: 0.6rem;
-      font-size: 1rem;
-      border-radius: 5px;
-      border: 1px solid #aaa;
-    }
-    button {
-      background: #159957;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-      border: none;
+
+    a.phone-link {
+      display: inline-block;
+      margin-top: 0.8rem;
+      font-weight: 700;
+      color: #bf360c;
+      text-decoration: none;
+      background: #ffcc80;
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       transition: background 0.3s ease;
     }
-    button:hover {
-      background: #0f6a45;
+
+    a.phone-link:hover {
+      background: #ffa726;
+      color: #fff8e1;
     }
+
     footer {
       text-align: center;
-      padding: 1.5rem 1rem;
-      background: #f7b733;
-      color: #5a381e;
-      font-size: 0.9rem;
+      padding: 1.6rem 1rem;
+      background: #00695c;
+      color: #fff8e1;
+      font-size: 1rem;
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: 1px;
     }
-    .contact {
-      font-weight: 700;
-      margin-top: 0.5rem;
+
+    /* Responsive styles */
+    @media (max-width: 600px) {
+      header {
+        font-size: 1.5rem;
+        padding: 1rem 1rem;
+      }
+
+      header img {
+        max-height: 30px;
+      }
+
+      main {
+        margin: 1.5rem 1rem;
+        padding: 1rem 1rem;
+      }
+
+      .card {
+        padding: 1.2rem 1.5rem;
+        font-size: 1rem;
+      }
+
+      a.phone-link {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.95rem;
+      }
+    }
+
+    /* Decorative SVG container for subtle background shapes */
+    .graphic {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      opacity: 0.1;
+      width: 80px;
+      height: 80px;
+      pointer-events: none;
     }
   </style>
 </head>
 <body>
   <header>
-    Nadan Cloud Kitchen – Homely Pothichor in Bangalore
+    <img id="kerala" src="https://upload.wikimedia.org/wikipedia/commons/4/46/Flag_of_Kerala.svg" alt="Kerala Sketch" />
+    Nadan Cloud Kitchen – Authentic Kerala Pothichor Delights<br />
+    in the Heart of Bangalore
+    <img id="bangalore" src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Bengaluru_City_Emblem.svg" alt="Bangalore Sketch" />
   </header>
+
   <main>
     <section class="intro card">
-      <p>Starting from <strong>25/08/2025 (Monday)</strong>, bringing you authentic Kerala-style Pothichor wrapped in banana leaf. Freshly prepared daily with hygienic & homely taste. Limited parcels available (first come, first serve).</p>
-      <p>Location: Vignanagar, Bangalore. Lunch parcels only (limited count – book early!).</p>
-      <p>Free delivery in Vignanagar (within 10 km) for the first week!</p>
-      <p class="contact">Call or DM to book: <a href="tel:+919066301838">+91 9066301838</a></p>
+      <p>
+        Experience the warmth of home-cooked Kerala flavors with our signature
+        Pothichor, lovingly wrapped in banana leaves for that authentic touch.
+      </p>
+      <p>
+        Every parcel is freshly prepared daily with the care and hygiene you'd
+        expect from your own kitchen.
+      </p>
+      <p><em>Limited lunch parcels available — first come, first served.</em></p>
+      <p>
+        <strong
+          >Enjoy free delivery within 10 km of Vignanagar for the first week!</strong
+        >
+      </p>
+      <a href="tel:+919066301838" class="phone-link">Call or WhatsApp to Book: +91 90663 01838</a>
     </section>
 
     <section class="menu card">
-      <h2>Menu</h2>
+      <h2>Our Menu</h2>
       <div class="menu-item"><span>Veg Pothichor</span><span>₹140</span></div>
-      <div class="menu-item"><span>Non-Veg Pothichor (Chicken)</span><span>₹160</span></div>
-      <div class="menu-item"><span>Sunday Special (with Pothichor)</span><span>Varies</span></div>
+      <div class="menu-item">
+        <span>Non-Veg Pothichor (Chicken)</span><span>₹160</span>
+      </div>
+      <div class="menu-item">
+        <span>Sunday Special (along with Pothichor)</span><span>Varies</span>
+      </div>
     </section>
 
     <section class="delivery-info card">
       <h2>Delivery Details</h2>
-      <p>Free delivery available in and around Vignanagar, Bangalore (up to 10 km) for the first week.</p>
-      <p>Pre-order your lunch parcel to secure your spot.</p>
-      <p>Lunch parcels only. Limited quantity—book early!</p>
-    </section>
-
-    <section class="order card">
-      <h2>Place Your Order</h2>
-      <form id="orderForm">
-        <label for="name">Name*</label>
-        <input type="text" id="name" name="name" required />
-
-        <label for="phone">Phone Number*</label>
-        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="10 digit phone number" required />
-
-        <label for="item">Select Item*</label>
-        <select id="item" name="item" required>
-          <option value="" disabled selected>Select your item</option>
-          <option value="Veg Pothichor - ₹140">Veg Pothichor - ₹140</option>
-          <option value="Non-Veg Pothichor (Chicken) - ₹160">Non-Veg Pothichor (Chicken) - ₹160</option>
-          <option value="Sunday Special">Sunday Special</option>
-        </select>
-
-        <label for="address">Delivery Address*</label>
-        <input type="text" id="address" name="address" required />
-
-        <label for="payment">Payment via Google Pay (GPay)*</label>
-        <input type="text" id="gpayRef" name="gpayRef" placeholder="Enter GPay transaction reference" required />
-
-        <button type="submit">Submit Order</button>
-      </form>
-      <div id="orderStatus" style="margin-top: 1rem; font-weight: bold;"></div>
+      <p>
+        We deliver fresh, piping hot lunch parcels right to your doorstep within
+        and around Vignanagar, Bangalore (up to 10 km radius).
+      </p>
+      <p>Pre-book early to secure your parcel — Lunch only, limited quantities!</p>
+      <p>Supporting local, cherishing tradition. Join us in this delicious journey!</p>
     </section>
   </main>
+
   <footer>
-    © 2025 Nadan Cloud Kitchen, Vignanagar, Bangalore. Support our small beginning and spread the word!
+    &copy; 2025 Nadan Cloud Kitchen, Vignanagar, Bangalore. Your taste of Kerala,
+    made with love.
   </footer>
-
-  <script>
-    // Simple client-side order submission simulation
-    const orderForm = document.getElementById('orderForm');
-    const orderStatus = document.getElementById('orderStatus');
-
-    orderForm.addEventListener('submit', function(event) {
-      event.preventDefault();
-
-      // Collect form data
-      const orderData = {
-        name: orderForm.name.value,
-        phone: orderForm.phone.value,
-        item: orderForm.item.value,
-        address: orderForm.address.value,
-        gpayRef: orderForm.gpayRef.value
-      };
-
-      // Basic validation already handled by input attributes
-      // Here you would typically send this data to your backend server
-      orderStatus.textContent = 'Thank you ' + orderData.name + '! Your order for ' + orderData.item + ' has been received. We will contact you soon.';
-
-      // Reset form after submission
-      orderForm.reset();
-    });
-  </script>
 </body>
 </html>
