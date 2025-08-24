@@ -1,84 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nadan Cloud Kitchen - Authentic Kerala Pothichor Delights</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto+Slab&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Poppins:wght@400;700&family=Roboto+Slab&display=swap');
 
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #fceabb, #f8b500);
-      color: #4b342f;
+      background: #FFF9C4; /* Soft bright yellow */
+      color: #2E563A; /* Deep green */
       margin: 0;
       padding: 0;
     }
 
     header {
-      background: #00695c;
-      color: #fff8e1;
-      padding: 1.6rem 2rem;
+      background: linear-gradient(90deg, #115E54, #8BC34A); /* Blend of dark green and bright green */
+      color: #fffde7;
+      padding: 1.8rem 2rem;
       text-align: center;
       font-family: 'Roboto Slab', serif;
       font-size: 2rem;
-      letter-spacing: 1.2px;
-      box-shadow: 0 4px 8px rgba(1, 1, 1, 0.15);
+      letter-spacing: 1.3px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
       position: relative;
-    }
-
-    header img {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      max-height: 40px;
-      opacity: 0.3;
-    }
-
-    header img#kerala {
-      left: 1rem;
-    }
-
-    header img#bangalore {
-      right: 1rem;
+      user-select: none;
     }
 
     main {
       max-width: 900px;
-      margin: 2.5rem auto;
+      margin: 2.8rem auto 3rem;
       padding: 0 1.5rem;
-      background: #fff3e0;
-      border-radius: 16px;
-      box-shadow: 0 6px 12px rgba(1, 1, 1, 0.1);
     }
 
     h2 {
       font-family: 'Roboto Slab', serif;
       font-weight: 700;
-      color: #bf360c;
+      color: #33691E;
       margin-bottom: 1rem;
-      border-bottom: 3px solid #ff6f00;
-      padding-bottom: 0.3rem;
+      border-bottom: 3px solid #CDDC39;
+      padding-bottom: 0.4rem;
     }
 
+    /* Card styles for menu and delivery */
+
     .card {
-      background: #fff8e1;
-      border-radius: 12px;
+      background: #fffde7;
+      border-radius: 16px;
       padding: 1.8rem 2.2rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-      line-height: 1.6;
-      font-size: 1.13rem;
-      position: relative;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 6px 15px rgba(43, 98, 43, 0.2);
+      color: #2E563A;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 10px 25px rgba(43, 98, 43, 0.35);
     }
 
     .menu-item {
       display: flex;
       justify-content: space-between;
-      padding: 0.65rem 0;
-      border-bottom: 1px solid #fdd835;
+      padding: 0.9rem 0;
+      border-bottom: 1.5px solid #dce775;
       font-weight: 600;
-      color: #4e342e;
     }
 
     .menu-item:last-child {
@@ -86,130 +73,119 @@
     }
 
     .delivery-info p {
-      margin: 0.6rem 0;
+      margin: 0.75rem 0;
       font-weight: 500;
-      color: #5d4037;
+      line-height: 1.5;
     }
 
     a.phone-link {
       display: inline-block;
-      margin-top: 0.8rem;
+      margin-top: 1.3rem;
       font-weight: 700;
-      color: #bf360c;
+      color: #2E563A;
       text-decoration: none;
-      background: #ffcc80;
-      padding: 0.5rem 1rem;
+      background: #CDDC39;
+      padding: 0.7rem 1.5rem;
       border-radius: 30px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      transition: background 0.3s ease;
+      box-shadow: 0 3px 9px rgba(43, 98, 43, 0.3);
+      transition: background 0.3s ease, color 0.3s ease;
+      user-select: none;
     }
 
     a.phone-link:hover {
-      background: #ffa726;
-      color: #fff8e1;
+      background: #9E9D24;
+      color: #fffde7;
     }
 
     footer {
       text-align: center;
-      padding: 1.6rem 1rem;
-      background: #00695c;
-      color: #fff8e1;
+      padding: 1.8rem 1rem;
+      background: linear-gradient(90deg, #115E54, #8BC34A);
+      color: #fffde7;
       font-size: 1rem;
       font-family: 'Poppins', sans-serif;
       letter-spacing: 1px;
+      user-select: none;
     }
 
-    /* Responsive styles */
+    /* Intro section with different font and styling */
+    .intro {
+      font-family: 'Merriweather', serif;
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: #3C5A25;
+      max-width: 680px;
+      margin: 0 auto 2rem;
+      line-height: 1.7;
+    }
+
+    .intro ul {
+      padding-left: 1.3rem;
+      margin: 0.5rem 0;
+    }
+
+    .intro ul li {
+      margin-bottom: 0.6rem;
+    }
+
+    /* Responsive mobile styles */
     @media (max-width: 600px) {
       header {
-        font-size: 1.5rem;
-        padding: 1rem 1rem;
-      }
-
-      header img {
-        max-height: 30px;
+        font-size: 1.6rem;
+        padding: 1.2rem 1rem;
       }
 
       main {
-        margin: 1.5rem 1rem;
-        padding: 1rem 1rem;
+        margin: 1.8rem 1rem 2rem;
+        padding: 0;
       }
 
       .card {
-        padding: 1.2rem 1.5rem;
-        font-size: 1rem;
+        padding: 1.4rem 1.6rem;
       }
 
       a.phone-link {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.95rem;
+        padding: 0.55rem 1.1rem;
+        font-size: 1rem;
       }
-    }
-
-    /* Decorative SVG container for subtle background shapes */
-    .graphic {
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
-      opacity: 0.1;
-      width: 80px;
-      height: 80px;
-      pointer-events: none;
     }
   </style>
 </head>
+
 <body>
   <header>
-    <img id="kerala" src="https://upload.wikimedia.org/wikipedia/commons/4/46/Flag_of_Kerala.svg" alt="Kerala Sketch" />
-    Nadan Cloud Kitchen – Authentic Kerala Pothichor Delights<br />
-    in the Heart of Bangalore
-    <img id="bangalore" src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Bengaluru_City_Emblem.svg" alt="Bangalore Sketch" />
+    Nadan Cloud Kitchen – Authentic Kerala Pothichor Delights<br>in the Heart of Bangalore
   </header>
 
   <main>
-    <section class="intro card">
-      <p>
-        Experience the warmth of home-cooked Kerala flavors with our signature
-        Pothichor, lovingly wrapped in banana leaves for that authentic touch.
-      </p>
-      <p>
-        Every parcel is freshly prepared daily with the care and hygiene you'd
-        expect from your own kitchen.
-      </p>
-      <p><em>Limited lunch parcels available — first come, first served.</em></p>
-      <p>
-        <strong
-          >Enjoy free delivery within 10 km of Vignanagar for the first week!</strong
-        >
-      </p>
+    <section class="intro">
+      <ul>
+        <li>Enjoy authentic Kerala Pothichor wrapped in banana leaves.</li>
+        <li>Freshly prepared daily with homely care.</li>
+        <li>Limited lunch parcels available — first come, first served.</li>
+        <li>Free delivery within 10 km of Vignanagar for the first week!</li>
+      </ul>
       <a href="tel:+919066301838" class="phone-link">Call or WhatsApp to Book: +91 90663 01838</a>
     </section>
 
-    <section class="menu card">
+    <section class="card menu">
       <h2>Our Menu</h2>
       <div class="menu-item"><span>Veg Pothichor</span><span>₹140</span></div>
-      <div class="menu-item">
-        <span>Non-Veg Pothichor (Chicken)</span><span>₹160</span>
-      </div>
-      <div class="menu-item">
-        <span>Sunday Special (along with Pothichor)</span><span>Varies</span>
-      </div>
+      <div class="menu-item"><span>Non-Veg Pothichor (Chicken)</span><span>₹160</span></div>
+      <div class="menu-item"><span>Sunday Special (along with Pothichor)</span><span>Varies</span></div>
     </section>
 
-    <section class="delivery-info card">
+    <section class="card delivery-info">
       <h2>Delivery Details</h2>
-      <p>
-        We deliver fresh, piping hot lunch parcels right to your doorstep within
-        and around Vignanagar, Bangalore (up to 10 km radius).
-      </p>
+      <p>We deliver fresh, piping hot lunch parcels right to your doorstep within and around Vignanagar, Bangalore (up to 10 km radius).</p>
       <p>Pre-book early to secure your parcel — Lunch only, limited quantities!</p>
       <p>Supporting local, cherishing tradition. Join us in this delicious journey!</p>
     </section>
   </main>
 
   <footer>
-    &copy; 2025 Nadan Cloud Kitchen, Vignanagar, Bangalore. Your taste of Kerala,
-    made with love.
+    &copy; 2025 Nadan Cloud Kitchen, Vignanagar, Bangalore. Your taste of Kerala, made with love.
   </footer>
 </body>
+
 </html>
